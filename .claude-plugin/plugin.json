@@ -1,0 +1,8 @@
+{
+  "name": "prompt-master",
+  "version": "0.1.0",
+  "description": "Botão Prompt Master acima da caixa de mensagem: reescreve o prompt antes de enviar, sob demanda ou automaticamente.",
+  "license": "MIT",
+  "author": { "name": "fabioversaobeta" },
+  "types": "./types/index.d.ts"
+}

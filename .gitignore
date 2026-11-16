@@ -1,0 +1,16 @@
+# Tipos gerados pelo engine do Claude Code a cada carga do mod
+.claude-plugin/types/
+
+# Dependências e artefatos
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Arquivos locais
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
