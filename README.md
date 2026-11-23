@@ -1,41 +1,43 @@
 # Prompt Master
 
-Mod do Claude Code que reescreve o seu prompt antes de enviar. Ele coloca uma
-faixa de botões logo acima da caixa de mensagem:
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 
-- **✨ Prompt Master**: reescreve o rascunho atual e devolve o texto na caixa,
-  para você revisar antes de enviar.
-- **Auto: ligado/desligado**: reescreve sozinho todo prompt enviado com Enter
-  (ignora comandos `/` e prompts com menos de 4 palavras). Começa desligado.
-- **Desfazer**: restaura o rascunho original depois de uma reescrita.
+A [Claude Code](https://claude.com/claude-code) mod that **rewrites your prompt before you send it**. It adds a row of buttons right above the message box:
 
-A reescrita usa o modelo `sonnet` (constante `MODEL` em `hooks/register.tsx`),
-mantém o idioma do rascunho e não inventa requisitos. Se falhar ou passar de
-30 s, o prompt segue como você escreveu.
+- **✨ Prompt Master**: rewrites the current draft and puts the result back in the box so you can review it before sending.
+- **Auto: on/off**: automatically rewrites every prompt sent with Enter (skips `/` commands and prompts under 4 words). Off by default.
+- **Undo**: restores your original draft after a rewrite.
 
-## Instalação
+<!-- TODO: add a screenshot of the button row, e.g.
+<p align="center"><img src="docs/button-row.png" width="600" /></p> -->
 
-No prompt de uma sessão de terminal:
+## How it works
 
-```
-/plugin install prompt-master --marketplace <owner>/<repo>
-```
+The rewrite uses the `sonnet` model (the `MODEL` constant in `hooks/register.tsx`), keeps the language of your draft and does not invent requirements. If it fails or takes longer than 30 s, your prompt is sent exactly as you wrote it.
 
-Ou, de um shell:
+## Installation
+
+From a Claude Code terminal session:
 
 ```
-claude plugin install prompt-master --marketplace <owner>/<repo>
+/plugin install prompt-master --marketplace fabioversaobeta/prompt-master
 ```
 
-Na desktop app: clique em **+** ao lado da caixa, depois Plugins, Add
-marketplace com `<owner>/<repo>`, e Add plugin.
+Or from a shell:
 
-Para desenvolver a partir de uma pasta local:
-
-```
-claude --plugin-dir <caminho>/prompt-master
+```bash
+claude plugin install prompt-master --marketplace fabioversaobeta/prompt-master
 ```
 
-## Licença
+In the desktop app: click **+** next to the message box, then Plugins → Add marketplace with `fabioversaobeta/prompt-master`, then Add plugin.
+
+To develop from a local folder:
+
+```bash
+claude --plugin-dir <path>/prompt-master
+```
+
+## License
 
 MIT
